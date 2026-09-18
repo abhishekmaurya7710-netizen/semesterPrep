@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>SemesterPrep - Select Your Course</title>
+
+<link rel="stylesheet" href="home.css">
+
+
+</head>
+
+<body>
+
+
+<!-- Header -->
+<header class="navbar">
+
+    <div class="logo">
+        Semester<span>Prep</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <a href="#" class="login-btn">Login</a>
+
+</header>
+
+
+<!-- Main Section -->
+<main class="selection-section">
+
+    <div class="selection-container">
+
+        <!-- Left Content -->
+        <div class="intro">
+
+            <div class="badge">
+                🎓 Semester Preparation
+            </div>
+
+            <h1>
+                Let's personalize your
+                <span>study journey.</span>
+            </h1>
+
+            <p>
+                Select your course, year, and branch to get
+                study materials, notes, previous year papers,
+                important questions, and more.
+            </p>
+
+            <div class="steps">
+
+                <div class="step active">
+                    <div class="step-number">1</div>
+
+                    <div>
+                        <h4>Choose Course</h4>
+                        <p>Select your degree or course.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+
+                    <div>
+                        <h4>Select Year</h4>
+                        <p>Choose your current academic year.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+
+                    <div>
+                        <h4>Select Branch</h4>
+                        <p>Choose your specialization.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Selection Card -->
+        <div class="selection-card">
+
+            <div class="card-heading">
+                <span>STEP 1 OF 3</span>
+
+                <h2>Select Your Course</h2>
+
+                <p>
+                    What course are you currently pursuing?
+                </p>
+            </div>
+
+
+            <!-- Course -->
+            <div class="form-group">
+
+                <label for="course">
+                    Course
+                </label>
+
+                <select id="course">
+
+                    <option value="">
+                        Select your course
+                    </option>
+
+                    <option value="btech">
+                        B.Tech
+                    </option>
+
+                    <option value="be">
+                        B.E.
+                    </option>
+
+                    <option value="bca">
+                        BCA
+                    </option>
+
+                    <option value="mca">
+                        MCA
+                    </option>
+
+                    <option value="bsc">
+                        B.Sc
+                    </option>
+
+                    <option value="msc">
+                        M.Sc
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Year -->
+            <div class="form-group">
+
+                <label for="year">
+                    Year
+                </label>
+
+                <select id="year">
+
+                    <option value="">
+                        Select your year
+                    </option>
+
+                    <option value="1">
+                        1st Year
+                    </option>
+
+                    <option value="2">
+                        2nd Year
+                    </option>
+
+                    <option value="3">
+                        3rd Year
+                    </option>
+
+                    <option value="4">
+                        4th Year
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Branch -->
+            <div class="form-group">
+
+                <label for="branch">
+                    Branch
+                </label>
+
+                <select id="branch">
+
+                    <option value="">
+                        Select your branch
+                    </option>
+
+                    <option value="cse">
+                        Computer Science & Engineering
+                    </option>
+
+                    <option value="it">
+                        Information Technology
+                    </option>
+
+                    <option value="ece">
+                        Electronics & Communication
+                    </option>
+
+                    <option value="ee">
+                        Electrical Engineering
+                    </option>
+
+                    <option value="me">
+                        Mechanical Engineering
+                    </option>
+
+                    <option value="ce">
+                        Civil Engineering
+                    </option>
+
+                    <option value="ai">
+                        Artificial Intelligence & ML
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Continue -->
+            <button
+                type="button"
+                class="continue-btn"
+                onclick="continueToDashboard()"
+            >
+                Continue
+                <span>→</span>
+            </button>
+
+
+            <p class="secure-text">
+                🔒 Your selection will be saved for your next visit.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-content">
+
+        <div class="logo">
+            Semester<span>Prep</span>
+        </div>
+
+        <p>
+            Study smarter. Prepare better. Score higher.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Help</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 SemesterPrep. All rights reserved.
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+<script>
+
+    function continueToDashboard() {
+
+        const course =
+            document.getElementById("course").value;
+
+        const year =
+            document.getElementById("year").value;
+
+        const branch =
+            document.getElementById("branch").value;
+
+
+        if (!course) {
+
+            alert("Please select your course.");
+
+            return;
+        }
+
+
+        if (!year) {
+
+            alert("Please select your year.");
+
+            return;
+        }
+
+
+        if (!branch) {
+
+            alert("Please select your branch.");
+
+            return;
+        }
+
+
+        // Save selection
+        localStorage.setItem(
+            "semesterprep_course",
+            course
+        );
+
+        localStorage.setItem(
+            "semesterprep_year",
+            year
+        );
+
+        localStorage.setItem(
+            "semesterprep_branch",
+            branch
+        );
+
+
+        // Go to next page
+      if (course === "btech" && branch === "cse" && year === "1") {
+    window.location.href = "/btechfirstyear";
+}
+
+else if (course === "btech" && branch === "cse" && year === "2") {
+    window.location.href = "/btechsecondyear";
+}
+ else if (course === "btech" && branch === "cse" && year === "3") {
+    window.location.href = "/btechthirdyear";
+}
+ else if (course === "btech" && branch === "cse" && year === "4") {
+    window.location.href = "/btechfourthyear";
+}
+else if (course === "btech" && branch === "it" && year === "1") {
+    window.location.href = "/btechitfirstyear";
+}
+else if (course === "btech" && branch === "it" && year === "2") {
+    window.location.href = "/btechitsecondyear";
+}
+else if (course === "btech" && branch === "it" && year === "3") {
+    window.location.href = "/btechitthirdyear";
+}
+else if (course === "btech" && branch === "it" && year === "4") {
+    window.location.href = "/btechitfourthyear";
+}
+else if (course === "btech" && branch === "ece" && year === "1") {
+    window.location.href = "/ecefirstyear";
+}
+else if (course === "btech" && branch === "ece" && year === "2") {
+    window.location.href = "/ecesecondyear";
+}
+
+else if (course === "btech" && branch === "ece" && year === "3") {
+    window.location.href = "/ecethirdyear";
+}
+else if (course === "btech" && branch === "ece" && year === "4") {
+    window.location.href = "/ecefourthyear";
+}
+
+else if (course === "btech" && branch === "ee" && year === "1") {
+    window.location.href = "/electricalfirstyear";
+}
+else if (course === "btech" && branch === "ee" && year === "2") {
+    window.location.href = "/electricalsecondyear";
+}
+else if (course === "btech" && branch === "ee" && year === "3") {
+    window.location.href = "/electricalthirdyear";
+}
+else if (course === "btech" && branch === "ee" && year === "4") {
+    window.location.href = "/electricalfourthyear";
+}
+    }
+
+</script>
+
+
+</body>
+
+</html>
