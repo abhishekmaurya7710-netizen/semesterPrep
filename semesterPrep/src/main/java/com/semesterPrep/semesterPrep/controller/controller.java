@@ -89,5 +89,37 @@ public class controller {
         public String firstyearphy(){
             return "btechfirstyearphy";
         }
-    
+         @GetMapping ("/btechfirstyearmath2")
+        public String firstyearmath2(){
+            return "btechfirstyearmath2";
+        }
+         @GetMapping ("/btechfirstyearelectrical")
+        public String firstyearelectrical(){
+            return "btechfirstyearelectrical";
+        }
+         @GetMapping ("/btechfirstyearchemistry")
+        public String firstyearchemistry(){
+            return "btechfirstyearchemistry";
+        }
+     @GetMapping ("/btechfirstyearcprogramming")
+        public String firstyearcprogramming(){
+            return "btechfirstyearcprogramming";
+        }
+       
+         @GetMapping ("/btechfirstyearsoftskill")
+        public String firstyearsoftskill(){
+            return "btechfirstyearsoftskill";
+        }
+         @GetMapping ("/btechfirstyearevs")
+        public String firstyearevs(){
+            return "btechfirstyearevs";
+        }
+         @GetMapping ("/btechfirstyearmechanical")
+        public String firstyearmechanical(){
+            return "btechfirstyearmechanical";
+        }
+         @GetMapping ("/btechfirstyearelectronics")
+        public String firstyearelectronics(){
+            return "btechfirstyearelectronics";
+        }
 }
